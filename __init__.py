@@ -76,8 +76,8 @@ def simple_reader(ref_image, dwpose_path, hamer_path, smpl_path, sample_size, cl
         np.stack(pose, axis=0)).permute(0, 3, 1, 2).contiguous() / 255.0
     
     img_np = ref_image.numpy()[0] * 255
-    img_np = img_np.astype(np.uint8)
-    _ref_img = cv2.cvtColor(img_np, cv2.COLOR_BGR2RGB)
+    _ref_img = img_np.astype(np.uint8)
+    #_ref_img = cv2.cvtColor(img_np, cv2.COLOR_BGR2RGB)
     state = torch.get_rng_state()
     ref_image = augmentation(_ref_img, img_transform, state)
     ref_image_clip = augmentation(_ref_img, clip_transform, state)
