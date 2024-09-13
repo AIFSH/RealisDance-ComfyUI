@@ -1,0 +1,27 @@
+transformers
+imageio==2.27.0
+decord==0.6.0
+gdown
+einops
+omegaconf
+safetensors
+#gradio
+wandb
+accelerate>=0.16.0
+deepspeed;sys_platform != "win32"
+tqdm
+numpy
+packaging
+pyre-extensions==0.0.29
+opencv-python
+matplotlib
+imageio[ffmpeg]
+torchsde
+oss2
+timeout_decorator
+pandas
+backoff
+peft
+piqa
+jsonlines
+diffusers==0.30.1
